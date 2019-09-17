@@ -4,8 +4,11 @@ This sample is constructed using Visual Stuido Code 1.38.1, so the editor is req
 
 __Note: This sample is constructed with TypeScript v3.6.3 that depends on NodeJS framework v10.16.3.__
 
-### Running sample in VSC
+## Project dependency
+This project uses the following library:
+- Axios → <code>npm i axios</code>
 
+## Running sample in VSC
 A TypeScript (.ts) code is transpiled into JavaScript (.js) file using VSCODE internal task runner, so it can be run using <code>node</code> command.
 
 To transpile code automatically, do this:
