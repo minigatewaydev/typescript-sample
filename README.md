@@ -16,6 +16,8 @@ A terminal will be displayed with current TypeScript compiler watch status. This
 
 Please ensure that the real-time compiler watch status is always happen. Otherwise, new changes in your TypeScript code will never renewed in JavaScript code.
 
+More information: https://code.visualstudio.com/docs/typescript/typescript-compiling
+
 To run the sample:
 - Make sure to change the required information in <code>app.ts</code> file
 - Terminal > New Terminal
