@@ -18,7 +18,7 @@ Please ensure that the real-time compiler watch status is always happen. Otherwi
 
 More information: https://code.visualstudio.com/docs/typescript/typescript-compiling
 
-To run the sample:
+After doing all above, to run the sample:
 - Make sure to change the required information in <code>app.ts</code> file
 - Terminal > New Terminal
 - type <b><code>node app.ts</code></b> and hit enter
