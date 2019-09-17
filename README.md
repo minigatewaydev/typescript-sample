@@ -6,7 +6,7 @@ __Note: This sample is constructed with TypeScript v3.6.3 that depends on NodeJS
 
 ### Running sample in VSC
 
-A TypeScript (.ts) code is transpiled into JavaScript (.js) file using VSCODE internal task runner, so it can be compiled using <code>node</code> command.
+A TypeScript (.ts) code is transpiled into JavaScript (.js) file using VSCODE internal task runner, so it can be run using <code>node</code> command.
 
 To transpile code automatically, do this:
 - Hit <code>ctrl + shift + B</code>
