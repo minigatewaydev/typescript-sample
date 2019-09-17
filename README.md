@@ -6,9 +6,18 @@ __Note: This sample is constructed with TypeScript v3.6.3 that depends on NodeJS
 
 ### Running sample in VSC
 
-After all dependencies is restored, in Visual Studio Code:
-- A
-- Make sure to change the required information in <code>app.js</code> file
+A TypeScript (.ts) code is transpiled into JavaScript (.js) file using VSCODE internal task runner, so it can be compiled using <code>node</code> command.
+
+To transpile code automatically, do this:
+- Hit <code>ctrl + shift + B</code>
+- Select <code>tsc:watch - tsconfig.json</code>
+
+A terminal will be displayed with current TypeScript compiler watch status. This watching behavior happened in real-time.
+
+Please ensure that the real-time compiler watch status is always happen. Otherwise, new changes in your TypeScript code will never renewed in JavaScript code.
+
+To run the sample:
+- Make sure to change the required information in <code>app.ts</code> file
 - Terminal > New Terminal
-- type <b><code>node app.js</code></b> and hit enter
+- type <b><code>node app.ts</code></b> and hit enter
 
