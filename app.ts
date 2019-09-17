@@ -44,8 +44,7 @@ async function sendSmsUsingGet() {
     let from = encodeURIComponent(req.from);
     let to = encodeURIComponent(req.to);
     let text = encodeURIComponent(req.text);
-    let url =
-        `${baseUrl}?gw-username=${req.username}&gw-password=${req.password}&gw-from=${from}&gw-to=${to}&gw-text=${text}&gw-coding=${req.coding}&gw-dlr-mask=${req.dlrMask}&gw-dlr-url=${req.dlrUrl}&gw-resp-type=${req.responseType}`;
+    let url = `${baseUrl}?gw-username=${req.username}&gw-password=${req.password}&gw-from=${from}&gw-to=${to}&gw-text=${text}&gw-coding=${req.coding}&gw-dlr-mask=${req.dlrMask}&gw-dlr-url=${req.dlrUrl}&gw-resp-type=${req.responseType}`;
 
     let resp = await api.sendGetAsync(url);
     console.log(resp);

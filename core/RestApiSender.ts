@@ -38,7 +38,6 @@ export class RestApiSender {
         } catch (error) {
             resp = new SimpleHttpResponse(99, null, error);
         }
-
         return resp;
     }
 }
