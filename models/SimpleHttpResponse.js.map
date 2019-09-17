@@ -1,0 +1,1 @@
+{"version":3,"file":"SimpleHttpResponse.js","sourceRoot":"","sources":["SimpleHttpResponse.ts"],"names":[],"mappings":";;AAAA;IAKI,4BAAY,UAAkB,EAAE,qBAA6B,EAAE,KAAa;QACxE,IAAI,CAAC,UAAU,GAAG,UAAU,CAAC;QAC7B,IAAI,CAAC,qBAAqB,GAAG,qBAAqB,CAAC;QACnD,IAAI,CAAC,KAAK,GAAG,KAAK,CAAC;IACvB,CAAC;IACL,yBAAC;AAAD,CAAC,AAVD,IAUC;AAVY,gDAAkB"}
