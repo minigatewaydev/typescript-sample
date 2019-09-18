@@ -11,6 +11,10 @@ This project uses the following library:
 ## Running sample in VSC
 A TypeScript (.ts) code is transpiled into JavaScript (.js) file using VSCODE internal task runner, so it can be run using <code>node</code> command.
 
+Before that:
+- Download as ZIP and extract
+- In VSC, File > Open Folder
+
 To transpile code automatically, do this:
 - Hit <code>ctrl + shift + B</code>
 - Select <code>tsc:watch - tsconfig.json</code>
