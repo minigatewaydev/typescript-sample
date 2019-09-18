@@ -28,5 +28,5 @@ More information: https://code.visualstudio.com/docs/typescript/typescript-compi
 After doing all above, to run the sample:
 - Make sure to change the required information in <code>app.ts</code> file
 - Terminal > New Terminal
-- type <b><code>node app.ts</code></b> and hit enter
+- type <b><code>node app.js</code></b> (.js and <b>NOT</b> the .ts) and hit enter
 
