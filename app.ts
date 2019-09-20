@@ -1,3 +1,4 @@
+import { Stopwatch } from 'ts-stopwatch';
 import { MtRequest } from './models/MtRequest';
 import { RestApiSender } from './core/RestApiSender';
 const baseUrl = "http://162.253.16.28:5010/api/send";
@@ -26,7 +27,7 @@ let api = new RestApiSender();
  * 2 = Send using GET
  */
 
-let type = 2;
+let type = 1;
 switch (type) {
     case 1: sendSmsUsingPost(); break;
     case 2: sendSmsUsingGet(); break;
@@ -34,18 +35,25 @@ switch (type) {
 
 async function sendSmsUsingPost() {
     console.log("Executing POST request..");
+    const sw = new Stopwatch();
+    sw.start();
     let resp = await api.sendPostAsync(req, baseUrl);
+    let elapsed = sw.stop();
     console.log(resp);
+    console.log(`Time taken: ${elapsed} ms`);
 }
 
 async function sendSmsUsingGet() {
     console.log("Executing GET request..");
-
+    const sw = new Stopwatch();
+    sw.start();
     let from = encodeURIComponent(req.from);
     let to = encodeURIComponent(req.to);
     let text = encodeURIComponent(req.text);
     let url = `${baseUrl}?gw-username=${req.username}&gw-password=${req.password}&gw-from=${from}&gw-to=${to}&gw-text=${text}&gw-coding=${req.coding}&gw-dlr-mask=${req.dlrMask}&gw-dlr-url=${req.dlrUrl}&gw-resp-type=${req.responseType}`;
 
     let resp = await api.sendGetAsync(url);
+    let elapsed = sw.stop();
     console.log(resp);
+    console.log(`Time taken: ${elapsed} ms`);
 }

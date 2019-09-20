@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var ts_stopwatch_1 = require("ts-stopwatch");
 var MtRequest_1 = require("./models/MtRequest");
 var RestApiSender_1 = require("./core/RestApiSender");
 var baseUrl = "http://162.253.16.28:5010/api/send";
@@ -58,7 +59,7 @@ var api = new RestApiSender_1.RestApiSender();
  * 1 = Send using POST
  * 2 = Send using GET
  */
-var type = 2;
+var type = 1;
 switch (type) {
     case 1:
         sendSmsUsingPost();
@@ -69,15 +70,19 @@ switch (type) {
 }
 function sendSmsUsingPost() {
     return __awaiter(this, void 0, void 0, function () {
-        var resp;
+        var sw, resp, elapsed;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     console.log("Executing POST request..");
+                    sw = new ts_stopwatch_1.Stopwatch();
+                    sw.start();
                     return [4 /*yield*/, api.sendPostAsync(req, baseUrl)];
                 case 1:
                     resp = _a.sent();
+                    elapsed = sw.stop();
                     console.log(resp);
+                    console.log("Time taken: " + elapsed + " ms");
                     return [2 /*return*/];
             }
         });
@@ -85,11 +90,13 @@ function sendSmsUsingPost() {
 }
 function sendSmsUsingGet() {
     return __awaiter(this, void 0, void 0, function () {
-        var from, to, text, url, resp;
+        var sw, from, to, text, url, resp, elapsed;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     console.log("Executing GET request..");
+                    sw = new ts_stopwatch_1.Stopwatch();
+                    sw.start();
                     from = encodeURIComponent(req.from);
                     to = encodeURIComponent(req.to);
                     text = encodeURIComponent(req.text);
@@ -97,7 +104,9 @@ function sendSmsUsingGet() {
                     return [4 /*yield*/, api.sendGetAsync(url)];
                 case 1:
                     resp = _a.sent();
+                    elapsed = sw.stop();
                     console.log(resp);
+                    console.log("Time taken: " + elapsed + " ms");
                     return [2 /*return*/];
             }
         });
