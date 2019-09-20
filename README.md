@@ -7,6 +7,7 @@ __Note: This sample is constructed with TypeScript v3.6.3 that depends on NodeJS
 ## Project dependency
 This project uses the following library:
 - Axios → <code>npm i axios</code>
+- TS Stopwatch → <code>npm i ts-stopwatch</code>
 
 ## Running sample in VSC
 A TypeScript (.ts) code is transpiled into JavaScript (.js) file using VSCODE internal task runner, so it can be run using <code>node</code> command.
