@@ -1,13 +1,13 @@
 export class Mt{
     readonly mtId: string;
     readonly receiver: string;
-    readonly status: number;
-    readonly message: string;
+    readonly statusCode: number;
+    readonly statusDescription: string;
 
-    constructor(mtId:string, receiver:string, status:number, message:string){
+    constructor(mtId:string, receiver:string, statusCode:number, statusDescription:string){
         this.mtId = mtId;
         this.receiver = receiver;
-        this.status = status;
-        this.message = message;
+        this.statusCode = statusCode;
+        this.statusDescription = statusDescription;
     }
 }
